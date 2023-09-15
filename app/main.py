@@ -1,5 +1,5 @@
 # Start Server
-from app.covid import classificar_imagem
+from app.previsor import classificar_imagem
 import os
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
@@ -43,12 +43,6 @@ def display_image(filename):
 def imageUpload():
     imagem = request.files['image']
     resultado = classificar_imagem(imagem)
-    if resultado == 0:
-        resultado = 'Resultado: Covid'
-    elif resultado == 1:
-        resultado = 'Resultado: PNEUMONIA não detectada e COVID não detectado'
-    elif resultado == 2:
-        resultado = 'Resultado: Pneumonia'
     return {"message": resultado}
 
 @app.route('/about')

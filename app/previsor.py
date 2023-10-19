@@ -45,11 +45,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 device
 
 classificadorLoaded = classificador()
-state_dict = torch.load('modelosCriados/modelo4.pth')
+state_dict = torch.load('app/modelo4.pth')
 classificadorLoaded.load_state_dict(state_dict)
 def transform_imagem(imagem_teste):
     from PIL import Image
-    imagem = Image.open('val/'+imagem_teste)
+    imagem = Image.open(imagem_teste)
     imagem = imagem.resize((64, 64))
     imagem = imagem.convert('RGB') 
     imagem = np.array(imagem.getdata()).reshape(*imagem.size, -1)
@@ -59,7 +59,6 @@ def transform_imagem(imagem_teste):
     return imagem
 
 def classificar_imagem(file):
-  nome_imagem = (file.split('/'))[1]
   listaDoencas = ['BDRNPDR', 'CNV', 'CRVO', 'No-Findings']
   imagem = transform_imagem(file)
   classificadorLoaded.eval()

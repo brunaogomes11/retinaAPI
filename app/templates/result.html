@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
-    <title>Raio-X-Covid - Resultado</title>
+    <title>EyeClassificator - Resultado</title>
 </head>
 <body>
-    <div class="main">
-        <a id="homePgBtn" class="btnLink" href="/">Página Inicial</a>
+    <div class="divFoto">
+        <img src="" alt="">
+    </div>
+    <div class="divApp">
         <h1 class="h3 mb-3 font-weight-normal">Resultado</h1>
         <img src="{{ url_for('display_image', filename=filename) }}" class="imagemRaioX" id="imageSelected" alt="Imagem Raio-X selecionada">
         <h5 class="h5 mb-3 font-weight-normal">{{ result }}</h5>
+        <a id="homePgBtn" class="btnLink" href="/">Classificar outra imagem</a>
     </div>
     <script>
     </script>

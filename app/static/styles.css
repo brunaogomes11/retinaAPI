@@ -8,7 +8,6 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: #0E92E3;
 }
 
 .main {
@@ -22,7 +21,6 @@ body {
   -ms-flex-align: center;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
 .btnLink {
@@ -79,9 +77,9 @@ input[type='file'] {
 }
 
 label {
-  background-color: #FFFFFF;
+  background-color: #000000;
   border-radius: 5px;
-  color: #000000;
+  color: white;
   cursor: pointer;
   padding: 10px 15px;
   margin: 10px;
@@ -90,7 +88,7 @@ label {
 }
 
 label:hover {
-  background-color: #dddddd;
+  background-color: #3f3f3f;
   transform: scale(1.05);
 }
 
@@ -116,4 +114,11 @@ label:hover {
 /* Resultado */
 #imageSelected {
   margin: 10px
+}
+
+.divApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

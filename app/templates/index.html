@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
 
-    <title>Raio-X-Covid - Página Inicial</title>
+    <title>EyeClassificator - Página Inicial</title>
   </head>
   <body>
     <div class="main">
-      <a id="aboutPgBtn" class="btnLink" href="/about">Sobre</a>
+      <h1>EyeClassificator</h1>
       <form class="form-signin" method=post enctype=multipart/form-data>
-          <h2 class="textoInicial">Selecione uma imagem para a análise</h2>
-          <span id="alertSpan">Lembre-se de colocar apenas imagens raio-x</span><br>
           <div class="input">
-            <label for="file">Selecionar arquivo</label>
+            <label for="file">Selecione a Imagem</label>
             <input id="file" name="file" type="file"  class="form-control-file">
           </div>
           <span id="isLoaded"></span>
